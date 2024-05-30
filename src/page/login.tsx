@@ -27,16 +27,6 @@ export const Login: FunctionComponent<LoginProps> = () => {
     const [passError, setPassError] = useState<boolean>(false)
     const initialValues: FormValues = { email: email, pass: pass };
 
-    const validate = () => {
-        if (!email) {
-            setEmailError(true)   
-        }
-        if (!pass) {
-            setPassError(true )
-        }
-        return !email || !pass  || passError || emailError
-    }
-
     return (<div>
         <h1>Login</h1>
         <Formik
@@ -71,8 +61,8 @@ export const Login: FunctionComponent<LoginProps> = () => {
         >
 
             <Form style={styles}>
-                    <Email useEmailState={[email, setEmail]} useErrorState={[emailError, setEmailError]} errorText="Email galat hai"/>
-                    <Password usePassState={[pass, setPass]} useErrorState={[passError, setPassError]} errorText="Password thk nai hai"/>
+                    <Email useEmailState={[email, setEmail]} useErrorState={[emailError, setEmailError]} errorText="Bilkul galat email di hai apne"/>
+                    <Password usePassState={[pass, setPass]} useErrorState={[passError, setPassError]} />
                     <Button type="submit" variant="contained" color="inherit" >
                         Submit
                     </Button>
