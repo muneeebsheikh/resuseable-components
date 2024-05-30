@@ -1,10 +1,6 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Email from './components/Email';
-import Password from './components/Password';
-import { createBrowserRouter, RouterProvider ,Route, BrowserRouter as Router } from 'react-router-dom';
-import { Switch } from '@mui/material';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './page/error-page';
 import { Login } from './page/login';
 import { Home } from './page/home';

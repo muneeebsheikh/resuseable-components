@@ -1,9 +1,8 @@
-import { FunctionComponent, useEffect, useState } from "react";
+import { FunctionComponent, useState } from "react";
 import Email from "../components/Email";
 import Password from "../components/Password";
-import { Button, FormControl, Link } from "@mui/material";
-import { Field, Form, Formik, FormikErrors, FormikValues } from "formik";
-import { Padding } from "@mui/icons-material";
+import { Button, Link } from "@mui/material";
+import { Form, Formik, FormikErrors } from "formik";
 
 
 interface LoginProps {
