@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider ,Route, BrowserRouter as Router } f
 import { Switch } from '@mui/material';
 import ErrorPage from './page/error-page';
 import { Login } from './page/login';
+import { Home } from './page/home';
 
 // import { Router } from '@mui/icons-material';
 // import { Switch } from '@mui/material';
@@ -18,8 +19,7 @@ function App() {
       path: '/',
       index: true,
       id: "0",
-      element: <div><Email useEmailState={useState<string>("")} useErrorState={useState<boolean>(false)}/>
-      <Password  usePassState={useState<string>("")} useErrorState={useState<boolean>(false)}/></div>,
+      element: <Home/>,
       errorElement: <ErrorPage />
     },
     {

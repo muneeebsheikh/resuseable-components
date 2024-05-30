@@ -1,8 +1,9 @@
 import { FunctionComponent, useEffect, useState } from "react";
 import Email from "../components/Email";
 import Password from "../components/Password";
-import { FormControl } from "@mui/material";
+import { Button, FormControl, Link } from "@mui/material";
 import { Field, Form, Formik, FormikErrors, FormikValues } from "formik";
+import { Padding } from "@mui/icons-material";
 
 
 interface LoginProps {
@@ -14,6 +15,11 @@ interface FormValues {
     pass: string
 }
 
+const styles = {
+    width: '50%',
+    margin: 'auto',
+    lineHeight: 5
+}
 
 export const Login: FunctionComponent<LoginProps> = () => {
     const [email, setEmail] = useState<string>("")
@@ -65,16 +71,16 @@ export const Login: FunctionComponent<LoginProps> = () => {
             }}
         >
 
-            <Form>
-                <div style={{ width: '50%', margin: 'auto' }}>
+            <Form style={styles}>
                     <Email useEmailState={[email, setEmail]} useErrorState={[emailError, setEmailError]} errorText="Email galat hai"/>
-                    <Password usePassState={[pass, setPass]} useErrorState={[passError, setPassError]} errorText="Password thk nai hy"/>
-                    <button type="submit">Submit</button>
-                </div>
+                    <Password usePassState={[pass, setPass]} useErrorState={[passError, setPassError]} errorText="Password thk nai hai"/>
+                    <Button type="submit" variant="contained" color="inherit" >
+                        Submit
+                    </Button>
             </Form>
         </Formik>
 
-
+        goto <Link href='/'>Home</Link>
 
     </div>)
 
