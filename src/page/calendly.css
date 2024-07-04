@@ -1,0 +1,14 @@
+.Popupbtn {
+    color: #ffffff;
+    background-color: #00a2ff;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    box-shadow: 2px 5px 5px 1px gray;
+}
+
+.Popupbtn:hover{
+    cursor: pointer;
+    box-shadow: 5px 10px 10px 1px gray;
+}

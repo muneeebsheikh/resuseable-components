@@ -16,6 +16,8 @@ export const Home: FunctionComponent<HomeProps> = () => {
     return (
         <div style={styles}>
             goto <Link href='/login'>Login</Link>
+            <br />
+            goto <Link href='/calendly'>Calendly</Link>
         </div>
     )
 }

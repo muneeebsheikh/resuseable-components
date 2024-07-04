@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './page/error-page';
 import { Login } from './page/login';
 import { Home } from './page/home';
+import { Calendly } from './page/calendly'
 
 // import { Router } from '@mui/icons-material';
 // import { Switch } from '@mui/material';
@@ -22,6 +23,11 @@ function App() {
       path: '/login',
       id: "1",
       element: <Login />
+    },
+    {
+      path: '/calendly',
+      id: "2",
+      element: <Calendly />
     }
 
   ])
